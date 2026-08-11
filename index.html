@@ -1,98 +1,147 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Portal Mitra Samira</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon"
-    href="https://drive.google.com/uc?export=view&id=1S0IoME4KWLgjIwghlhzX36SzTES4FsCw">
+<title>Portal Mitra Samira</title>
 
-  <style>
-    *{
-      box-sizing:border-box;
-    }
+<style>
 
-    body{
-      margin:0;
-      font-family:Arial,sans-serif;
-      background:#f4f7f5;
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:20px;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    .card{
-      width:100%;
-      max-width:430px;
-      background:white;
-      border-radius:22px;
-      padding:30px 25px;
-      text-align:center;
-      box-shadow:0 8px 30px rgba(0,0,0,.12);
-    }
+body{
+  margin:0;
+  padding:20px;
+  font-family:Arial,sans-serif;
+  background:#f4f7f5;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
-    .logo{
-      width:130px;
-      height:130px;
-      object-fit:cover;
-      border-radius:22px;
-      margin-bottom:15px;
-    }
+.card{
+  width:100%;
+  max-width:430px;
+  background:white;
+  border-radius:22px;
+  padding:28px 24px;
+  text-align:center;
+  box-shadow:0 8px 30px rgba(0,0,0,.12);
+}
 
-    h1{
-      color:#0b6b3a;
-      font-size:25px;
-      margin:8px 0;
-    }
+.logo{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:10px;
+}
 
-    .subtitle{
-      color:#666;
-      font-size:15px;
-      margin-bottom:25px;
-    }
+h1{
+  color:#0b6b3a;
+  font-size:25px;
+  margin:8px 0;
+}
 
-    .button{
-      display:block;
-      width:100%;
-      padding:16px;
-      margin:12px 0;
-      border-radius:12px;
-      text-decoration:none;
-      color:white;
-      font-size:17px;
-      font-weight:bold;
-    }
+.subtitle{
+  color:#666;
+  font-size:15px;
+  margin-bottom:22px;
+}
 
-    .portal{
-      background:#0b6b3a;
-    }
+.portal-box{
+  background:#f1f8f4;
+  border-radius:15px;
+  padding:20px 15px;
+  margin-bottom:22px;
+}
 
-    .passport{
-      background:#1565C0;
-    }
+.portal-title{
+  color:#0b6b3a;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
 
-    .cuti{
-      background:#00897B;
-    }
+.portal-info{
+  font-size:13px;
+  color:#666;
+  margin-bottom:12px;
+}
 
-    .mitra{
-      background:#6A1B9A;
-    }
+input{
+  width:100%;
+  padding:14px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:18px;
+  text-align:center;
+  outline:none;
+}
 
-    .registrasi{
-      background:#1976D2;
-    }
+.cari{
+  display:block;
+  width:100%;
+  margin-top:12px;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:#0b6b3a;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-    .footer{
-      margin-top:25px;
-      font-size:12px;
-      color:#888;
-    }
-  </style>
+.menu-title{
+  color:#0b6b3a;
+  font-size:17px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.menu{
+  display:block;
+  width:100%;
+  padding:15px 10px;
+  margin:10px 0;
+  border-radius:11px;
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:bold;
+}
+
+.passport{
+  background:#1565C0;
+}
+
+.cuti{
+  background:#00897B;
+}
+
+.mitra{
+  background:#6A1B9A;
+}
+
+.registrasi{
+  background:#1976D2;
+}
+
+.footer{
+  margin-top:22px;
+  font-size:12px;
+  color:#888;
+  line-height:1.4;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -110,46 +159,109 @@
     Portal Layanan Mitra
   </div>
 
-  <a
-    class="button portal"
-    href="https://bit.ly/PortalMitraSamira"
-    target="_blank">
-    📲 BUKA PORTAL MITRA
-  </a>
+
+  <div class="portal-box">
+
+    <div class="portal-title">
+      👤 PORTAL MITRA SAMIRA
+    </div>
+
+    <div class="portal-info">
+      Masukkan ID Mitra<br>
+      Contoh: <b>99887</b><br>
+      Tanpa angka 0 di depan dan tanpa huruf.
+    </div>
+
+    <input
+      type="text"
+      id="idmitra"
+      placeholder="Masukkan ID Mitra"
+      inputmode="numeric">
+
+    <button
+      class="cari"
+      onclick="cariMitra()">
+      🔍 CARI
+    </button>
+
+  </div>
+
+
+  <div class="menu-title">
+    📋 LAYANAN MITRA
+  </div>
+
 
   <a
-    class="button passport"
+    class="menu passport"
     href="https://forms.gle/rEamrqTboHKzGDFc6"
     target="_blank">
     🛂 PERMINTAAN SURAT REKOMENDASI PASSPORT
   </a>
 
+
   <a
-    class="button cuti"
+    class="menu cuti"
     href="https://forms.gle/iiSAdMn83uf7jffJ9"
     target="_blank">
     🕌 PENGAJUAN CUTI JAMAAH
   </a>
 
+
   <a
-    class="button mitra"
+    class="menu mitra"
     href="https://agen.samiratravel.co.id/home"
     target="_blank">
     🤝 PENDAFTARAN MITRA BARU
   </a>
 
+
   <a
-    class="button registrasi"
+    class="menu registrasi"
     href="https://docs.google.com/forms/d/e/1FAIpQLSe7O9ko2x4y_RrPdjrgpJCc71Osbcg11QP-e-v-DMjq4MCkeQ/viewform"
     target="_blank">
     ➕ REGISTRASI JAMAAH BARU
   </a>
 
+
   <div class="footer">
-    Semoga Allah SWT memudahkan seluruh proses ibadah Umrah. Aamiin.
+    Semoga Allah SWT memudahkan seluruh proses
+    ibadah Umrah. Aamiin.
   </div>
 
 </div>
+
+
+<script>
+
+function cariMitra(){
+
+  var id = document
+    .getElementById("idmitra")
+    .value
+    .trim();
+
+  if(id === ""){
+    alert("Silakan masukkan ID Mitra terlebih dahulu.");
+    return;
+  }
+
+  if(!/^\d+$/.test(id)){
+    alert("ID Mitra hanya boleh berisi angka.");
+    return;
+  }
+
+  var portal =
+  "https://script.google.com/macros/s/AKfycbxl7lP0dmZ2uCE7L09qsAPddEwEp32XwR4K1AmRkj2WXo_uum_2CrRwRMhVXIz1qwCulg/exec";
+
+  window.open(
+    portal + "?idmitra=" + encodeURIComponent(id),
+    "_blank"
+  );
+
+}
+
+</script>
 
 </body>
 </html>
