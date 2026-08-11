@@ -256,13 +256,12 @@ function cariMitra(){
   }
 
   var portal =
-  "https://script.google.com/macros/s/AKfycbxl7lP0dmZ2uCE7L09qsAPddEwEp32XwR4K1AmRkj2WXo_uum_2CrRwRMhVXIz1qwCulg/exec";
+    "https://script.google.com/macros/s/AKfycbxl7lP0dmZ2uCE7L09qsAPddEwEp32XwR4K1AmRkj2WXo_uum_2CrRwRMhVXIz1qwCulg/exec";
 
-  window.open(
-    portal + "?idmitra=" + encodeURIComponent(id),
-    "_blank"
-  );
+  window.location.href =
+    portal + "?idmitra=" + encodeURIComponent(id);
 
+}
 }
 
 </script>
