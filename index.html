@@ -12,7 +12,7 @@
 <link rel="icon" type="image/jpeg" href="samira_icon_192.jpg">
 <link rel="apple-touch-icon" href="samira_icon_192.jpg">
 <meta name="mobile-web-app-capable" content="yes">
-  
+
 <title>Portal Mitra Samira</title>
 
 <style>
@@ -37,7 +37,7 @@ body{
   max-width:430px;
   background:white;
   border-radius:22px;
-  padding:28px 24px;
+  padding:24px 24px 28px;
   text-align:center;
   box-shadow:0 8px 30px rgba(0,0,0,.12);
 }
@@ -47,20 +47,18 @@ body{
   height:120px;
   object-fit:cover;
   border-radius:18px;
-  margin-bottom:10px;
+  margin-bottom:4px;
 }
 
 h1{
   color:#0b6b3a;
   font-size:25px;
-  margin:8px 0;
+  margin:2px 0 16px;
 }
 
-.subtitle{
-  color:#666;
-  font-size:15px;
-  margin-bottom:22px;
-}
+/* =========================
+   PORTAL MITRA
+   ========================= */
 
 .portal-box{
   background:#f1f8f4;
@@ -82,6 +80,13 @@ h1{
   margin-bottom:12px;
 }
 
+/* KETERANGAN ID MERAH */
+
+.portal-info .warning{
+  color:#d32f2f;
+  font-weight:bold;
+}
+
 input{
   width:100%;
   padding:14px;
@@ -90,6 +95,10 @@ input{
   font-size:18px;
   text-align:center;
   outline:none;
+}
+
+input:focus{
+  border-color:#0b6b3a;
 }
 
 .cari{
@@ -125,21 +134,44 @@ input{
   font-weight:bold;
 }
 
-.passport{
-  background:#1565C0;
+/* =========================
+   URUTAN LAYANAN MITRA
+   ========================= */
+
+/* 1. PENDAFTARAN JAMAAH BARU */
+
+.registrasi{
+  background:#16f2d0;
+  color:#064d42;
 }
 
-.cuti{
-  background:#00897B;
-}
+/* 2. PENDAFTARAN MITRA BARU */
 
 .mitra{
   background:#6A1B9A;
 }
 
-.registrasi{
-  background:#1976D2;
+/* 3. REKOMENDASI PASPOR */
+
+.passport{
+  background:#1565C0;
 }
+
+/* 4. CUTI JAMAAH */
+
+.cuti{
+  background:#18A6B3;
+}
+
+/* 5. PANDUAN */
+
+.panduan{
+  background:#0b6b3a;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
 
 .footer{
   margin-top:22px;
@@ -163,10 +195,10 @@ input{
 
   <h1>🕌 SAMIRA TRAVEL</h1>
 
-  <div class="subtitle">
-    Portal Layanan Mitra
-  </div>
 
+  <!-- =========================
+       PORTAL MITRA
+       ========================= -->
 
   <div class="portal-box">
 
@@ -177,7 +209,10 @@ input{
     <div class="portal-info">
       Masukkan ID Mitra<br>
       Contoh: <b>99887</b><br>
-      Tanpa angka 0 di depan dan tanpa huruf.
+
+      <span class="warning">
+        Tanpa angka 0 di depan dan tanpa huruf.
+      </span>
     </div>
 
     <input
@@ -195,40 +230,72 @@ input{
   </div>
 
 
+  <!-- =========================
+       LAYANAN MITRA
+       ========================= -->
+
   <div class="menu-title">
     📋 LAYANAN MITRA
   </div>
 
 
-  <a
-    class="menu passport"
-    href="https://forms.gle/rEamrqTboHKzGDFc6"
-    target="_blank">
-    🛂 PERMINTAAN SURAT REKOMENDASI PASSPORT
-  </a>
-
-
-  <a
-    class="menu cuti"
-    href="https://forms.gle/iiSAdMn83uf7jffJ9"
-    target="_blank">
-    🕌 PENGAJUAN CUTI JAMAAH
-  </a>
-
-
-  <a
-    class="menu mitra"
-    href="https://agen.samiratravel.co.id/home"
-    target="_blank">
-    🤝 PENDAFTARAN MITRA BARU
-  </a>
-
+  <!-- 1. PENDAFTARAN JAMAAH BARU -->
 
   <a
     class="menu registrasi"
     href="https://docs.google.com/forms/d/e/1FAIpQLSe7O9ko2x4y_RrPdjrgpJCc71Osbcg11QP-e-v-DMjq4MCkeQ/viewform"
     target="_blank">
-    ➕ REGISTRASI JAMAAH BARU
+
+    ➕ PENDAFTARAN JAMAAH BARU
+
+  </a>
+
+
+  <!-- 2. PENDAFTARAN MITRA BARU -->
+
+  <a
+    class="menu mitra"
+    href="https://agen.samiratravel.co.id/home"
+    target="_blank">
+
+    🤝 PENDAFTARAN MITRA BARU
+
+  </a>
+
+
+  <!-- 3. SURAT REKOMENDASI PASPOR -->
+
+  <a
+    class="menu passport"
+    href="https://forms.gle/rEamrqTboHKzGDFc6"
+    target="_blank">
+
+    🛂 PERMINTAAN SURAT REKOMENDASI PASPOR
+
+  </a>
+
+
+  <!-- 4. PENGAJUAN CUTI JAMAAH -->
+
+  <a
+    class="menu cuti"
+    href="https://forms.gle/iiSAdMn83uf7jffJ9"
+    target="_blank">
+
+    🕌 PENGAJUAN CUTI JAMAAH
+
+  </a>
+
+
+  <!-- 5. PANDUAN PENDAFTARAN JAMAAH BARU -->
+
+  <a
+    class="menu panduan"
+    href="#"
+    onclick="bukaPanduan(); return false;">
+
+    📖 PANDUAN PENDAFTARAN JAMAAH BARU
+
   </a>
 
 
@@ -238,6 +305,7 @@ input{
   </div>
 
 </div>
+
 
 <script>
 
@@ -263,6 +331,17 @@ function cariMitra(){
 
   window.location.href =
     portal + "?idmitra=" + encodeURIComponent(id);
+
+}
+
+
+/* =========================
+   LINK PANDUAN
+   ========================= */
+
+function bukaPanduan(){
+
+  alert("Panduan Pendaftaran Jamaah Baru akan segera tersedia.");
 
 }
 
